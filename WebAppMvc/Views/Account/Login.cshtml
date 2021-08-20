@@ -1,0 +1,45 @@
+﻿@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+@*@using (Html.BeginForm())
+    {
+        <div>
+           UserName : @Html.TextBox("UserName")
+        </div>
+        <div>
+            Password : @Html.TextBox("Password")
+        </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    }*@
+
+
+@*@using (Html.BeginForm())
+    {
+        <div>
+            UserName : @Html.TextBoxFor(m => m.UserName)
+        </div>
+        <div>
+            Password: @Html.TextBoxFor(m => m.Password)
+        </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    }*@
+
+<form asp-action="Login" asp-controller="Account">
+    <div>
+        UserName: <input type="text" asp-for="UserName" />
+    </div>
+    <div>
+        Password: <input type="text" asp-for="Password" />
+    </div>
+    <div>
+        <input type="submit" value="Login" />
+    </div>
+</form>
